@@ -1,11 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import Locations from './containers/Locations';
+import Products from './containers/Products';
+
 
 export default (
   <Route path={'/'} component={App}>
-    <Route path={'locations'} component={Locations}/>
+    <IndexRoute component={Locations}/>
+    <Route path={'products/:name'} component={Products}/>
   </Route>
 )
